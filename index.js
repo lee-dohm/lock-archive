@@ -40,9 +40,9 @@ module.exports = async robot => {
     let config;
 
     try {
-      const data = await github.repos.getContent({owner, repo, path});
+      const data = await github.repos.getContent({owner, repo, configPath});
       config = yaml.load(new Buffer(data.content, 'base64').toString());
-    } catch {
+    } catch (err) {
       // Don't actually perform for repository without a config
       config = {perform: false};
     }
