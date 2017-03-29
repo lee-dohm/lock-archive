@@ -1,0 +1,39 @@
+{
+  "name": "probot-lock",
+  "version": "0.0.1",
+  "description": "Bot that locks the conversation of closed Issues and merged PRs",
+  "main": "index.js",
+  "scripts": {
+    "start": "probot run ./index.js",
+    "test": "mocha && xo"
+  },
+  "keywords": [
+    "probot",
+    "lock",
+    "conversation"
+  ],
+  "author": "Lee Dohm",
+  "license": "ISC",
+  "dependencies": {
+    "probot": "^0.2.0"
+  },
+  "devDependencies": {
+    "expect": "^1.20.2",
+    "mocha": "^3.2.0",
+    "xo": "^0.18.0"
+  },
+  "xo": {
+    "esnext": true,
+    "space": true,
+    "envs": [
+      "node",
+      "mocha"
+    ],
+    "rules": {
+      "camelcase": 1
+    }
+  },
+  "engines": {
+    "node": "~7.7.0"
+  }
+}
