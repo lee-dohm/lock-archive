@@ -14,6 +14,16 @@ npm run
 
 For more information, see the [documentation for probot](https://github.com/probot/probot).
 
+## Configuration
+
+This bot will not take action unless a `.github/lock.yaml` file exists in the repository to which it is installed. This file can also include the following configuration values:
+
+* `daysUntilLock` &mdash; The number of days of inactivity required before the bot will lock the conversation on closed pull requests
+* `lockComment` &mdash; The text to post in a comment before locking qualifying pull requests
+* `perform` &mdash; `true` to perform locking, `false` to only log what would have been locked
+
+See `lib/defaults.js` for the defaults to all of these values.
+
 ## Deploying to Heroku
 
 1. [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy) - Click this button and pick an **App Name** that Heroku is happy with. Before you can complete this, you'll need config variables from the next step.
