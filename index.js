@@ -1,7 +1,7 @@
 const yaml = require('js-yaml');
 
-const Lock = require('lib/lock');
-const paginate = require('lib/paginate');
+const Lock = require('./lib/lock');
+const paginate = require('./lib/paginate');
 
 // Check for Issues and PRs to lock every hour
 const INTERVAL = 60 * 60 * 1000;
