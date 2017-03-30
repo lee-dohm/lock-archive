@@ -43,6 +43,8 @@ module.exports = async robot => {
       const data = await github.repos.getContent({owner, repo, configPath});
       config = yaml.load(new Buffer(data.content, 'base64').toString());
     } catch (err) {
+      robot.log.error(err, 'An error occurred reading the configuration');
+
       // Don't actually perform for repository without a config
       config = {perform: false};
     }
