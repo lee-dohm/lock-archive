@@ -40,7 +40,7 @@ module.exports = async robot => {
     let config;
 
     try {
-      const data = await github.repos.getContent({owner, repo, configPath});
+      const data = await github.repos.getContent({owner, repo, path: configPath});
       config = yaml.load(new Buffer(data.content, 'base64').toString());
     } catch (err) {
       robot.log.error(err, 'An error occurred reading the configuration');
