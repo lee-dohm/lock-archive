@@ -47,6 +47,8 @@ module.exports = async robot => {
       config = {perform: false};
     }
 
+    robot.log.debug(config, 'Configuration loaded')
+
     config = Object.assign(config, {owner, repo, logger: robot.log});
 
     return new Lock(github, config);
