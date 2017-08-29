@@ -1,6 +1,8 @@
-# Probot: Lock
+# Probot: Lock &mdash; Unmaintained
 
 > a GitHub Integration built with [Probot](https://github.com/probot/probot) that locks the conversation of old PRs.
+
+This was originally constructed for a much earlier version of Probot. It is unmaintained and can be considered archived.
 
 ## Setup
 
